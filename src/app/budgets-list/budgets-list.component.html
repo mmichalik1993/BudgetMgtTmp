@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Start money</th>
+    <th>From</th>
+    <th>Till</th>
+  </tr>
+  <tr *ngFor = "let budget of budgets">
+   <a  [routerLink]="['/Budgets', budget.id]"> 
+      <td>{{budget.startMoney}}</td>
+      <td>{{budget.from.toDateString()}}</td>
+      <td>{{budget.till.toDateString()}}</td>
+    </a>
+  </tr>
+</table>

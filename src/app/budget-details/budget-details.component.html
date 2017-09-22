@@ -1,0 +1,18 @@
+<table *ngIf="budgetDetails">
+   <tr>
+    <th>Start money</th>
+    <th>From</th>
+    <th>Till</th>
+    <th>Final balance</th>
+  </tr>
+  <tr>
+    <td>{{budgetDetails.startMoney}}</td>
+    <td>{{budgetDetails.from.toDateString()}}</td>
+    <td>{{budgetDetails.till.toDateString()}}</td>
+    <td>{{budgetDetails.finalBalance}}</td>
+  </tr>
+</table>
+
+<app-budget-details-cash-flow *ngIf="budgetDetails" [budgetId]="budgetDetails.id"></app-budget-details-cash-flow>
+<app-budget-details-impacts-table *ngIf="budgetDetails" [budgetId]="budgetDetails.id"></app-budget-details-impacts-table>
+<app-budget-details-expenses-table *ngIf="budgetDetails" [budgetId]="budgetDetails.id"></app-budget-details-expenses-table>

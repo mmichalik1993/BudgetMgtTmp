@@ -1,0 +1,34 @@
+<h2>Create budget</h2>
+
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+    <div>
+        <span>Start money:</span>
+        <div style="display: inline-block">
+            <div><error-message [control]="modelForm.controls['startMoney']"></error-message></div>
+            <input type="number" name="startMoney" formControlName="startMoney"/>
+        </div>
+    </div>
+    
+
+<fieldset formGroupName="dateRange">
+        <div>
+            <span>From:</span>
+            <div style="display: inline-block"> 
+                <div><error-message [control]="modelForm.controls.dateRange"></error-message></div>
+                <div><error-message [control]="modelForm.controls.dateRange.controls['from']"></error-message></div>
+                <input type="date" name="from" formControlName="from" >
+                <!--<ng2-datepicker name="from" formControlName="from" [options]="options" (change) ="updateFromIfRequired()" ></ng2-datepicker>-->
+                </div>
+            </div>
+        <div>
+            <span>Till</span>
+            <div style="display: inline-block">
+                <div><error-message [control]="modelForm.controls.dateRange.controls['till']"></error-message></div>
+                   <input type="date" name="till" formControlName="till"  >
+            </div>
+        </div>
+    </fieldset>
+    <button type="submit"[disabled]="!modelForm.valid" >Add</button>
+        <button type="button" (click)="check()" >Add</button>
+</form>
+

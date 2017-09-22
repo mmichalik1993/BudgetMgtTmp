@@ -1,0 +1,15 @@
+<table>
+  <caption>Expenses</caption>
+  <tr class="header">
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Date</th>
+      <th>Description</th>
+  </tr>
+  <tr *ngFor="let expense of expenses; let i = index" [ngClass]="{true:'dark',false:'light'}[i%2==0]">
+    <td>{{expense.name}}</td>
+    <td>{{expense.amount}}</td>
+    <td>{{expense.date}}</td>
+    <td>{{expense.description}}</td>
+  </tr>
+</table>

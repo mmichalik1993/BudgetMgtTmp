@@ -1,0 +1,11 @@
+td{
+    padding: 10px;
+}
+
+tr:hover{
+background-color: lightgray;
+}
+
+tr:hover:first-child{
+background-color: inherit;
+}

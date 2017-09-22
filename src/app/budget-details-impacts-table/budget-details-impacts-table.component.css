@@ -1,0 +1,27 @@
+table{
+    min-width: 500px;
+}
+td{
+    padding: 5px;
+}
+
+caption{
+      background-color: darkgreen;
+          padding: 5px;
+}
+
+th{
+    padding: 5px;
+}
+
+tr.dark{
+        background-color: forestgreen;
+}
+
+tr.light{
+    background-color: lightgreen;
+}
+
+tr.header{
+    background-color: darkgreen;
+}
